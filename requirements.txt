@@ -1,4 +1,4 @@
-Flask3.0.0
-pytest8.0.0
-bandit1.7.5
-Werkzeug3.0.1
+Flask==3.0.0
+pytest==8.0.0
+bandit==1.7.5
+Werkzeug==3.0.1
