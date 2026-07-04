@@ -1,0 +1,18 @@
+# Automated DevSecOps CI/CD Pipeline
+
+A production-ready Python Flask application integrated with an automated DevSecOps pipeline using Jenkins, Git, and Docker.
+
+## 🚀 Pipeline Architecture
+This repository implements a robust, continuous automated pipeline designed with a security-first approach:
+1. **Source Control Integration:** Tracks code updates automatically via Git and GitHub.
+2. **Static Application Security Testing (SAST):** Integrates **Bandit** directly into the build pipeline to scan source code for high-severity vulnerabilities (e.g., hardcoded credentials) and block insecure builds.
+3. **Automated Unit Testing:** Executes unit tests using **pytest** to ensure application functionality before packaging.
+4. **Containerization:** Configured with a multi-stage **Dockerfile** to package the microservice into an isolated, minimal runtime environment.
+
+## 🛠️ Technology Stack
+* **Language:** Python 3.9
+* **Framework:** Flask
+* **CI/CD Automation:** Jenkins
+* **Security Scanner:** Bandit (SAST)
+* **Testing:** Pytest
+* **Containerization:** Docker
