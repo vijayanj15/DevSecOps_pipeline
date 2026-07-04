@@ -14,4 +14,4 @@ def test_hello(client):
     """
     response = client.get('/')
     assert response.status_code == 200
-    assert b"Hello, DevSecOps" in response.data
+    assert b"Hello, DevOps Interview!" in response.data
