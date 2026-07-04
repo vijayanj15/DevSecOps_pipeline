@@ -7,7 +7,7 @@ stages {
     stage('Install Dependencies') {
         steps {
             echo 'Installing Python dependencies...'
-            sh 'pip install -r requirements.txt'
+            bat 'pip install -r requirements.txt'
         }
     }
     
@@ -17,7 +17,7 @@ stages {
             echo 'Running Bandit Security Scanner...'
             // This scans app.py for security vulnerabilities.
             // If it finds a hardcoded password, it returns a non-zero exit code and fails the build!
-            sh 'bandit -r app.py' 
+            bat 'bandit -r app.py' 
         }
     }
     
@@ -25,7 +25,7 @@ stages {
     stage('Test') {
         steps {
             echo 'Running automated tests with pytest...'
-            sh 'pytest test_app.py'
+            bat 'pytest test_app.py'
         }
     }
     
