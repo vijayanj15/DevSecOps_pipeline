@@ -1,4 +1,4 @@
-from flask import Flask
+from Flask_App import app
 
 app = Flask(__name__)
 
@@ -11,4 +11,4 @@ def hello():
 # DB_PASSWORD = "super_secret_password_123"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000) # nosec
+    app.run(host='0.0.0.0', port=5000)  # nosec
