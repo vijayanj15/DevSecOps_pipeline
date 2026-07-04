@@ -11,21 +11,16 @@ stages {
         }
     }
     
-    /* STREAMING_CHUNK:Configuring the Security stage... */
     stage('DevSecOps: SAST Scan') {
         steps {
             echo 'Running Bandit Security Scanner...'
-            // This scans app.py for security vulnerabilities.
-            // If it finds a hardcoded password, it returns a non-zero exit code and fails the build!
-            bat 'bandit -r Flask_App.py'
+            bat 'python -m bandit -r Flask_App.py'
         }
     }
-    
-    /* STREAMING_CHUNK:Configuring the Test stage... */
     stage('Test') {
         steps {
-            echo 'Running automated tests with pytest...'
-            bat 'pytest test_app.py'
+            echo 'Running Unit Tests...'
+            bat 'python -m pytest'
         }
     }
     
