@@ -1,0 +1,4 @@
+Flask3.0.0
+pytest8.0.0
+bandit1.7.5
+Werkzeug3.0.1

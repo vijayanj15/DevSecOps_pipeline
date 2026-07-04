@@ -17,7 +17,7 @@ stages {
             echo 'Running Bandit Security Scanner...'
             // This scans app.py for security vulnerabilities.
             // If it finds a hardcoded password, it returns a non-zero exit code and fails the build!
-            bat 'bandit -r app.py' 
+            bat 'bandit -r Flask_App.py'
         }
     }
     
