@@ -23,13 +23,14 @@ pipeline {
             }
         }
         
-        stage('Containerize (Mock)') {
-            steps {
-                echo 'Building Docker Image...'
-                // In a fully configured Jenkins environment with Docker installed, you would run:
-                // bat 'docker build -t devsecops-app:latest .'
-                echo 'Dockerfile is present and ready for containerization!'
-            }
+        stage('Containerize') {
+        steps {
+            echo 'Building Docker Image...'
+            bat 'docker build -t devsecops-app:latest .'
+            
+            echo 'Verifying the built image...'
+            bat 'docker images devsecops-app'
         }
+    }
     }
 }
